@@ -1,0 +1,1 @@
+// Différence minimum absolue
