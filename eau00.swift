@@ -19,7 +19,7 @@
 for i in 0...9 {
     for j in 0...9 {
         for k in 0...9 {
-            if i != j && j != k && i != k && i < j && j < k {
+            if i < j && j < k {
                 print("\(i)\(j)\(k)", terminator: ", ")
             }
         }
