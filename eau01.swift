@@ -11,7 +11,7 @@ for i in 0...9 {
     for j in 0...9 {
         for k in 0...9 {
             for l in 0...9 {
-                if i == k && j == l {
+                if (i == k && j == l) || (i+j >= k+l) {
                     continue
                 } else {
                     print("\(i)\(j) \(k)\(l)", terminator: ", ")
@@ -20,7 +20,3 @@ for i in 0...9 {
         }
     }
 }
-
-// il me manque le fait qu'il ne faut pas qu'il y ait 01 00 s'il y a eu 00 01
-
-// je remarque que ij est tjrs < à kl
