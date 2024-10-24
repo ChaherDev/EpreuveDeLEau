@@ -9,6 +9,30 @@
 
 // Afficher -1 si le paramètre est négatif ou mauvais.
 
+func fibonacci(_ n: Int) -> Int {
+    if n == 0 {
+        return 0
+    } else if n == 1 {
+        return 1
+    }
+
+    var previous = 0
+    var current = 1
+
+    for _ in 2...n {
+        let next = previous + current
+        previous = current
+        current = next
+    }
+
+    return current
+}
+
 if CommandLine.arguments.count != 2 || Int(CommandLine.arguments[1]) == nil || Int(CommandLine.arguments[1])! < 0 {
     print(-1)
+} else {
+    let argument = Int(CommandLine.arguments[1])!
+
+    let result = fibonacci(argument)
+    print(result)
 }
