@@ -8,13 +8,17 @@ if CommandLine.arguments.count != 3 {
 
 func minMax(firstArgument: Int, secondArgument: Int) {
     if firstArgument < secondArgument {
+        var arrayOfNumbers = [Int]
         for i in firstArgument...secondArgument {
-            print(i, terminator: ", ")
+            arrayOfNumbers.append(i)
         }
+        let numbers = arrayOfNumbers.map { String($0) }.joined(separator: ", ")
     } else if firstArgument > secondArgument {
+        var arrayOfNumbers = [Int]
         for i in secondArgument...firstArgument {
-            print(i, terminator: ", ")
+            arrayOfNumbers.append(i)
         }
+        let numbers = arrayOfNumbers.map { String($0) }.joined(separator: ", ") 
     } else {
         print (firstArgument)
     }
