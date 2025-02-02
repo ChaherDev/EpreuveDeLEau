@@ -1,11 +1,3 @@
-if CommandLine.arguments.count != 3 {
-    print("error")
-} else if Int(CommandLine.arguments[1]) == nil || Int(CommandLine.arguments[2]) == nil {
-    print("error")
-} else {
-    minMax(firstArgument: CommandLine.arguments[1], secondArgument: CommandLine.arguments[2])
-}
-
 func minMax(firstArgument: String, secondArgument: String) {
     if Int(firstArgument)! < Int(secondArgument)! {
         var arrayOfNumbers = [String]()
@@ -24,4 +16,12 @@ func minMax(firstArgument: String, secondArgument: String) {
     } else {
         print (firstArgument)
     }
+}
+
+if CommandLine.arguments.count != 3 {
+    print("error")
+} else if Int(CommandLine.arguments[1]) == nil || Int(CommandLine.arguments[2]) == nil {
+    print("error")
+} else {
+    minMax(firstArgument: CommandLine.arguments[1], secondArgument: CommandLine.arguments[2])
 }
