@@ -1,9 +1,3 @@
-if CommandLine.arguments.count < 3 {
-    print("error")
-} else {
-    print("\(indexWanted())")
-}
-
 func indexWanted() -> Int {
     var arguments = CommandLine.arguments
     arguments.remove(at: 0)
@@ -21,6 +15,11 @@ func indexWanted() -> Int {
         }
     }
 
-    
     return -1
+}
+
+if CommandLine.arguments.count < 3 {
+    print("error")
+} else {
+    print("\(indexWanted())")
 }
