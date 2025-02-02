@@ -1,13 +1,3 @@
-let arguments = CommandLine.arguments.dropFirst()
-
-if arguments.count < 2 {
-    print("error")
-} else if areArgumentsIntegers() == false {
-    print("error")
-} else {
-    absoluteMinimumDifference()
-}
-
 func areArgumentsIntegers() -> Bool {
     let integers = arguments.compactMap { Int($0) }
     if arguments.count != integers.count {
@@ -27,4 +17,14 @@ func absoluteMinimumDifference() {
     }
     arrayOfDifferences.sort()
     print(arrayOfDifferences[0])
+}
+
+let arguments = CommandLine.arguments.dropFirst()
+
+if arguments.count < 2 {
+    print("error")
+} else if areArgumentsIntegers() == false {
+    print("error")
+} else {
+    absoluteMinimumDifference()
 }
